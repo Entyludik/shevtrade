@@ -15,7 +15,7 @@
     --header-gradient: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
 }
 
-/* Темная тема */
+
 [data-theme="dark"] {
     --bg-white: #0f172a;
     --bg-light: #1e293b;
@@ -30,7 +30,6 @@
     --header-gradient: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.7));
 }
 
-/* Крипто тема */
 [data-theme="crypto"] {
     --bg-white: #13111c;
     --bg-light: #1a1625;
@@ -541,7 +540,6 @@ body {
     }
 }
 
-/* Крипто тема - неоновые эффекты */
 [data-theme="crypto"] .theme-btn.active {
     box-shadow: 0 0 20px var(--accent-green);
 }
@@ -573,7 +571,6 @@ body {
     box-shadow: 0 0 15px var(--accent-green);
 }
 
-/* Добавлены стили для настроенных переменных RGB для всех тем */
 :root {
     --accent-green-rgb: 16, 185, 129;
     --accent-red-rgb: 239, 68, 68;
@@ -589,7 +586,6 @@ body {
     --accent-red-rgb: 255, 74, 108;
 }
 
-/* Анимация для селектов и кнопок */
 .select-selected, #generate-btn {
     position: relative;
     overflow: hidden;
@@ -610,7 +606,7 @@ body {
     left: 100%;
 }
 
-/* Data visualization styles for chart */
+
 .chart path, .chart line {
     transition: all 0.3s ease;
 }
@@ -641,7 +637,7 @@ body {
     shape-rendering: crispEdges;
 }
 
-/* Стили для осей */
+
 .axis text {
     font-size: 11px;
     fill: var(--text-primary);
@@ -662,9 +658,7 @@ body {
     pointer-events: all;
 }
 
-/* Добавляем стили для новых элементов и анимаций */
 
-/* Стили для значка времени */
 .time-badge {
     background-color: var(--accent-green);
     color: white;
@@ -675,7 +669,7 @@ body {
     box-shadow: 0 3px 10px rgba(var(--accent-green-rgb), 0.3);
 }
 
-/* Стили для заголовка настроек */
+
 .settings-header {
     display: flex;
     align-items: center;
@@ -733,7 +727,7 @@ body {
     opacity: 1;
 }
 
-/* Анимация загрузки для кнопки */
+
 @keyframes button-loading {
     0% { opacity: 1; }
     50% { opacity: 0.7; }
@@ -762,7 +756,7 @@ body {
     60%, 100% { transform: translateX(100%); }
 }
 
-/* Анимация загрузки для сигнала */
+
 .loading-animation {
     display: flex;
     flex-direction: column;
@@ -805,7 +799,6 @@ body {
     50% { transform: scale(1.2); opacity: 1; }
 }
 
-/* Анимация пульсации селекта */
 @keyframes pulse-select {
     0% { transform: scale(1); }
     50% { transform: scale(1.02); }
@@ -834,7 +827,6 @@ body {
     100% { opacity: 1; }
 }
 
-/* Анимация при смене темы */
 .theme-transition {
     animation: theme-transition 0.5s ease;
 }
@@ -845,7 +837,7 @@ body {
     100% { opacity: 1; }
 }
 
-/* Стили для анимации времени сигнала */
+
 .signal-time-info {
     display: flex;
     flex-direction: column;
@@ -853,7 +845,7 @@ body {
     margin-top: 15px;
 }
 
-/* Стили для футера */
+
 .footer {
     margin-top: auto;
     text-align: center;
@@ -864,20 +856,20 @@ body {
     font-weight: 500;
 }
 
-/* Стили для отображения времени в хедере сигнала */
+
 #signal-time {
     font-size: 14px;
     font-weight: 500;
 }
 
-/* Обновленные стили для сигнала */
+
 .signal-block {
     min-height: 250px;
     display: flex;
     flex-direction: column;
 }
 
-/* Стили для окрашивания градиентом при наведении */
+
 #generate-btn {
     position: relative;
 }
@@ -900,7 +892,7 @@ body {
     opacity: 1;
 }
 
-/* Дополнительные стили для режима Crypto */
+
 [data-theme="crypto"] .signal-direction.green,
 [data-theme="crypto"] .signal-direction.red {
     text-shadow: 0 0 10px currentColor;
@@ -919,7 +911,7 @@ body {
     filter: drop-shadow(0 0 5px var(--accent-green));
 }
 
-/* Респонсивные стили для мобильных устройств */
+
 @media screen and (max-width: 480px) {
     .loadingDots span {
         width: 10px;
@@ -944,7 +936,7 @@ body {
     }
 }
 
-/* Улучшаем отображение для планшетов */
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .main-content {
         padding: 25px;
@@ -959,5 +951,121 @@ body {
         max-width: 600px;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+
+.telegram-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #2AABEE, #229ED9);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 5px 15px rgba(42, 171, 238, 0.25);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.telegram-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(42, 171, 238, 0.35);
+}
+
+.telegram-btn:active {
+    transform: translateY(-1px);
+}
+
+.telegram-icon {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.telegram-btn:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 0;
+    transition: width 0.6s, height 0.6s, opacity 0.6s;
+}
+
+.telegram-btn:hover:before {
+    width: 200%;
+    height: 200%;
+    opacity: 1;
+}
+
+.telegram-btn:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.5s;
+}
+
+.telegram-btn:hover:after {
+    left: 100%;
+}
+
+/* Стили для темной темы */
+[data-theme="dark"] .telegram-btn {
+    background: linear-gradient(135deg, #2AABEE, #229ED9);
+    box-shadow: 0 5px 15px rgba(42, 171, 238, 0.2);
+}
+
+[data-theme="dark"] .telegram-btn:hover {
+    box-shadow: 0 8px 25px rgba(42, 171, 238, 0.3);
+}
+
+/* Стили для крипто темы */
+[data-theme="crypto"] .telegram-btn {
+    background: linear-gradient(135deg, #2AABEE, #229ED9);
+    box-shadow: 0 0 30px rgba(42, 171, 238, 0.2);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(42, 171, 238, 0.5);
+}
+
+[data-theme="crypto"] .telegram-btn:hover {
+    box-shadow: 0 0 40px rgba(42, 171, 238, 0.3);
+}
+
+[data-theme="crypto"] .telegram-icon {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
+}
+
+@media screen and (max-width: 480px) {
+    .telegram-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .telegram-icon {
+        width: 18px;
+        height: 18px;
     }
 }
